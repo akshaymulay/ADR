@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+<style type="text/css">
+.blink {
+	-webkit-animation: blink .99s linear infinite;
+	-moz-animation: blink .99s linear infinite;
+	-ms-animation: blink .99s linear infinite;
+	-o-animation: blink .99s linear infinite;
+	 animation: blink .99s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+</style>
+	<script>
+function showForm() {
+  var x = document.getElementById("form");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+	<head>
+			<meta charset="utf-8" />
+	<title>Doctor Form</title>
+			<meta name="Description" content="" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<!-- Fonts -->
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css' />
+			<link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css' />
+			<!-- Bootsrap -->
+			<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+			<!-- Font awesome -->
+			<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+			<!-- Owl carousel -->
+			<link rel="stylesheet" href="assets/css/owl.carousel.css" />
+			<!-- Template main Css -->
+			<link rel="stylesheet" href="assets/css/style.css" />
+			<!-- Modernizr -->
+			<script src="assets/js/modernizr-2.6.2.min.js"></script>
+			<link rel="icon" type="png" sizes="16x16" href="assets/images/favicon-16x16.png">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+		.style1 {color: #FFFFFF}
+        </style>
+	</head>
+	<body bgcolor="#115c9b">
+	<header class="main-header">
+			<nav class="navbar navbar-static-top" >
+				<div class="navbar-top" >
+				  <div class="container" >
+					  <div class="row">
+						<div class="col-sm-6 col-xs-12" >
+							<ul class="list-unstyled list-inline header-contact" >
+								<li> <i class="fa fa-phone"></i> <a href="tel:">+91 839-098-3057 </a> </li>
+								 <li> <i class="fa fa-envelope"></i> <a href="mailto:ADRAdmin.gov.in">ADRAdmin.gov.in</a> </li>
+						   </ul> <!-- /.header-contact  -->
+						</div>
+					  </div>
+				  </div>
+				</div>
+				<div class="navbar-main" align="right">
+				  		<div class="navbar-header" align="left">
+						<div id="navbar" class="navbar-collapse collapse pull-right">
+					 <a href="ADRHome.html"> <img src="assets/images/adr-logo.JPG" alt="ADR System" width="263" height="62" align="left" /></a>
+					  </div>
+					  </div>
+				  <div class="container">
+					<div id="navbar" class="navbar-collapse collapse pull-right">
+					  <ul class="nav navbar-nav">
+						<li><a class="is-active" href="ADRHome.html">HOME</a></li>
+						<li><a href="ADRPhotos.html">About ADR</a></li>
+						<li class="has-child"><a href="#">Report ADR</a>
+						  <ul class="submenu">
+							 <li class="submenu-item page-description"><a href="DoctorNurseForm.html">As Doctor/Nurse </a></li>
+							 <li class="submenu-item"><a href="PharmacistForm.html">As Pharmacist</a></li>
+							  <li class="submenu-item"><a href="PatientForm.html">As Patient</a></li>
+						  </ul>
+						</li>
+						<li><a href="RegisterUser.html">Register</a></li>
+					  </ul>
+					</div> <!-- /#navbar -->
+				  </div> <!-- /.container -->
+				</div> <!-- /.navbar-main -->
+			</nav> 
+	</header> <!-- /. main-header -->
+		<div class="btn-danger" align="center"><font size=4px>Error Occurred...Please try again..!</font></div>
+	<center><div class="bg-info">
+	<input type="button" name="okbutton" class="btn"value="Continue As Guest User" onClick="showForm();"/>
+	<a href="RegisterUser.html"><input type="button" name="a" class="btn" value="Not a Member?? Register Here"></a>
+	<a href="MemberLogin.html"><input type="button" name="choice" class="btn" value="Already Member?? Login Here"></a>
+	</div></center>
+		<div id="form" style="display:none;">
+		<p class="tab blink"><font size="+2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp As Guest user you will not be able to follow future communications for the Adverse Reactions you have raised..</font></p><br/>
+		<center><font size="+2"><a href="RegisterUser.html"><u>Register Here</u></a></font></center>
+				  <div class="header">
+		<h3>Doctor/Nurse Form</h3>
+	  </div>
+	  <form method="post" action="./jsp/saveDoctorForm.jsp" id="registartionForm">
+		 <div class="input-group">
+				<input type="text" name="nameDoctor" placeholder="Name" required>
+				</div>
+				<div class="input-group">
+				<input type="tel" name="contactDoctor" placeholder="e.g 8390983057" pattern="[0-9]{10}"required>
+				</div>
+				<div class="input-group">
+				<input type="email" name="emailAddress" placeholder="Email Address" required>
+				</div>
+				 Occupation
+     <select name="occupation">
+     <option value="Doctor">Doctor</option>
+    <option value="Nurse">Nurse</option>
+  </select>
+				 <div class="input-group">
+			<input type="text" name="medicineBydrprescription" placeholder="Medicine Name" required>
+			</div>
+			<div class="input-group">
+			<input type="text" name="doseQuantity" placeholder="Dose" required>
+			</div>
+			<select name="doseType" style="padding:8px;padding-top:-10%;">
+			 <option >Select dose as</option>
+  <option value="mg">mg</option>
+  <option value="mcg">mcg</option>
+  <option value="gm">gm</option>
+  <option value="ml">ml</option>
+</select>
+<div class="input-group">
+			Therapy Start Date<input type="date" name="therapyStart" placeholder="Date" required>
+			</div>
+			<div class="input-group">
+			Therapy End Date<input type="date" name="therapyEnd" placeholder="Date" required>
+			</div>
+<div class="input-group">
+			Date the problem occurred<input type="date" name="dateProblemoccu" placeholder="Date" required>
+			</div>
+			<div class="input-group">
+			<label>Did any of the following happen?</label>
+			</div>
+			<div class="input-group">
+			<select name="majorIssue">
+			<option value="Hospitalization - admitted or stayed longer"> Hospitalization - admitted or stayed longer</option>
+			<option value="Disability or health problem"> Disability or health problem</option>
+			<option value="Birth defect"> Birth defect</option>
+			<option value="Life-threatening"> Life-threatening</option>
+			<option value="Not taken Proper dose"> Not taken Proper dose</option>
+			<option value="Allergy">Allergy</option>
+			</select>	
+			</div>
+			<div class="input-group">
+			<label>Adverse Event, Product Problem:?</label>
+			</div>
+			<div class="input-group">
+			<select name="majorProblem">
+			<option value="Product Use Error?r">Product Use Error?</option>
+			<option value="Product Problem (e.g., defects/malfunctions)"> Product Problem?</option>
+			<option value="Problem with Different Manufacturer of Same Medicine?">Different Medicine of Same Company?</option>
+			<option value="Life-threatening">Life-threatening</option>
+			<option value="Not taken Proper dose">Not taken Proper dose</option>
+			<option value="Allergy">Allergy</option>
+			</select>	
+			</div>
+<div class="input-group">
+			 Date Of Event<input type="date" name="dateEvent" value="de" />
+			</div>
+			<div class="input-group">
+			<label>Describe Event, Problem, or Product Use Error:</label>
+			<textarea name="describrEvent" rows="4" cols="40" onfocus="this.value=''">Enter details here...</textarea>
+				</div>
+			<div class="input-group">
+			<label>Relevant Tests/Laboratory Data, Including Dates:</label>
+			<textarea name="relevantTests" rows="4" cols="40" onfocus="this.value=''">Enter details here...</textarea>
+			</div>
+			<input type="submit" value="Submit" class="btn" style="margin-left:60px;">
+		  </div>
+			</form>
+			</div>
+			  <p>&nbsp;</p>
+				<div class="footer-bottom">
+							<a href="ADRHome.html"><span class="style1">ADRSystem @ copyrights 2019</span></a>			
+				</div>
+			</footer><!-- main-footer -->
+		</body>
+		</html>
+			

@@ -1,0 +1,152 @@
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+				<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+				<head>
+						<meta charset="utf-8" />
+				<title>Register New User</title>
+						<meta name="Description" content="" />
+						<meta name="viewport" content="width=device-width, initial-scale=1" />
+						<!-- Fonts -->
+						<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css' />
+						<link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css' />
+						<!-- Bootsrap -->
+						<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+						<!-- Font awesome -->
+						<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+						<!-- Owl carousel -->
+						<link rel="stylesheet" href="assets/css/owl.carousel.css" />
+						<!-- Template main Css -->
+						<link rel="stylesheet" href="assets/css/style.css" />
+						<!-- Modernizr -->
+						<link rel="icon" type="png" sizes="16x16" href="assets/images/favicon-16x16.png">
+						<script src="assets/js/modernizr-2.6.2.min.js"></script>
+					<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+					<style type="text/css">
+					.style1 {color: #FFFFFF}
+					</style>
+					<script>
+					function checkPass()
+		{
+			//Store the password field objects into variables ...
+			var password = document.getElementById('password');
+			var confirmPassword = document.getElementById('confirmPassword');
+			//Store the Confimation Message Object ...
+			var message = document.getElementById('confirmMessage');
+			//Set the colors we will be using ...
+			var goodColor = "#66cc66";
+			var badColor = "#ff6666";
+			//Compare the values in the password field 
+			//and the confirmation field
+			if(password.value == confirmPassword.value){
+				//The passwords match. 
+				//Set the color to the good color and inform
+				//the user that they have entered the correct password 
+				confirmPassword.style.backgroundColor = goodColor;
+				message.style.color = goodColor;
+				message.innerHTML = "Passwords Match!"
+				document.getElementById('submit').disabled=false;
+			}else{
+				//The passwords do not match.
+				//Set the color to the bad color and
+				//notify the user.
+				confirmPassword.style.backgroundColor = badColor;
+				message.style.color = badColor;
+				message.innerHTML = "Passwords Do Not Match!"
+				document.getElementById('submit').disabled=true;
+			}
+		}  
+					</script>
+				</head>
+				<body bgcolor="#115c9b">
+				<header class="main-header">
+						<nav class="navbar navbar-static-top" >
+							<div class="navbar-top" >
+							  <div class="container" >
+								  <div class="row">
+									<div class="col-sm-6 col-xs-12" >
+										<ul class="list-unstyled list-inline header-contact" >
+											<li> <i class="fa fa-phone"></i> <a href="tel:">+91 839-098-3057 </a> </li>
+											 <li> <i class="fa fa-envelope"></i> <a href="mailto:ADRAdmin.gov.in">ADRAdmin.gov.in</a> </li>
+									   </ul> <!-- /.header-contact  -->
+									</div>
+								  </div>
+							  </div>
+							</div>
+							<div class="navbar-main" align="right">
+									<div class="navbar-header" align="left">
+									<div id="navbar" class="navbar-collapse collapse pull-right">
+								 <a href="ADRHome.html"><img src="assets/images/adr-logo.JPG" alt="ADR System" width="263" height="62" align="left" /></a>
+								  </div>
+								  </div>
+							  <div class="container">
+								<div id="navbar" class="navbar-collapse collapse pull-right">
+								  <ul class="nav navbar-nav">
+									<li><a class="is-active" href="ADRHome.html">Home</a></li>
+									<li><a href="ADRPhotos.html">About ADR</a></li>
+									<li class="has-child"><a href="#">Report ADR</a>
+									  <ul class="submenu">
+								<li class="submenu-item page-description"><a href="DoctorNurseForm.html">As Doctor/Nurse </a></li>
+										 <li class="submenu-item"><a href="PharmacistForm.html">As Pharmacist</a></li>
+										  <li class="submenu-item"><a href="PatientForm.html">As Patient</a></li>
+									  </ul>
+									</li>
+									 <li><a href="#">Login</a>
+					<ul class="submenu">
+						<li class="submenu-item"><a href="MemberLogin.html">Consumer Login</a></li>
+                         <li class="submenu-item"><a href="DCGILogin.html">DCGI Authority</a></li>
+                      </ul>
+					  </li>
+									<li><a href="RegisterUser.html">Register</a></li>
+								  </ul>
+								</div> <!-- /#navbar -->
+							  </div> <!-- /.container -->
+							</div> <!-- /.navbar-main -->
+						</nav> 
+				</header> <!-- /. main-header -->
+						<div class="btn-danger" align="center"><font size=4px>Error Occured...Please try again..!</font></div>
+						  <div class="header">
+				<h3>Registration Form</h3>
+			  </div>
+			  <form method="post" action="./jsp/registerUser.jsp" id="registartionForm">
+					<div class="input-group">
+						 <label>Register As</label>
+					 <select name = "registerAs">
+					   <option value ="Doctor">Doctor/Nurse</option>
+					   <option value ="Pharmacist">Pharmacist</option>
+					   <option value = "Patient">Patient</option>
+					 </select>
+					 </div>
+				 <div class="input-group">
+						<input type="text" name="firstName" placeholder="First Name" required>
+						</div>
+						<div class="input-group">
+						<input type="text" name="lastName" placeholder="Last Name" required>
+						</div>
+						<div class="input-group">
+						<input type="text" name="contactNumber" placeholder="e.g 8390983057" pattern="[0-9]{10}" required>
+						</div>
+						<div class="input-group">
+						<input type="email" name="emailAddress" placeholder="Email Address" required>
+						</div>
+						<div class="input-group">
+						<input type="text" name="userLogin" placeholder="User Login" required>
+						</div>
+					 <div class="input-group">
+					<input id="password" type="password" name="password" placeholder="Password" required>
+					</div>
+					<div class="input-group">
+					<input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password" onkeyup="checkPass(); return false;" required>
+					</div>
+					<span id="confirmMessage" class="confirmMessage"></span>
+					 <div class="input-group">
+					<input id="submit" type="submit" value="Save Details" class="btn">
+					</div>
+					  </div>
+					</form>		
+					  <p>&nbsp;</p>
+					  <p>&nbsp;</p>
+						<div class="footer-bottom">
+									<a href="ADRHome.html"><span class="style1">ADRSystem @ copyrights 2019</span></a>			
+						</div>
+					</footer><!-- main-footer -->
+				</body>
+				</html>
